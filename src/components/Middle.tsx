@@ -4,7 +4,7 @@ import e from "../assets/e.mp4";
 
 const Middle = () => {
   return (
-    <div className="max-w-[80%] mx-auto p-8">
+    <div className="max-w-[100%] mx-auto p-8">
       <div className="grid grid-cols-12 gap-4">
         {/* Left Section */}
         <div className="col-span-7 space-y-4">
@@ -56,6 +56,7 @@ const Middle = () => {
 
           {/* Large Image Section */}
 
+          {/* <div className=""> */}
           <div className="w-full aspect-video  rounded-lg overflow-hidden">
             <video
               src={e}
@@ -66,7 +67,7 @@ const Middle = () => {
             />
           </div>
           {/* Bottom Section with Empty Box and Button */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 ">
             <button className="bg-black text-white rounded-lg p-4 flex items-center justify-between cursor-pointer">
               Watch latest VTubes
               <svg
