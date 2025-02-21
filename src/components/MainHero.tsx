@@ -1,22 +1,29 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Radio, Heart, Star, MessageSquare, TrendingUp } from "lucide-react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 import f from "../assets/f.png";
 
 const AnimatedHeroChat = () => {
   // Previous price data and messages state remain the same
   const priceData = [
-    { time: '1h', price: 0.00042 },
-    { time: '2h', price: 0.00045 },
-    { time: '3h', price: 0.00040 },
-    { time: '4h', price: 0.00048 },
-    { time: '5h', price: 0.00052 },
-    { time: '6h', price: 0.00050 },
-    { time: '7h', price: 0.00055 },
-    { time: '8h', price: 0.00060 },
+    { time: "1h", price: 0.00042 },
+    { time: "2h", price: 0.00045 },
+    { time: "3h", price: 0.0004 },
+    { time: "4h", price: 0.00048 },
+    { time: "5h", price: 0.00052 },
+    { time: "6h", price: 0.0005 },
+    { time: "7h", price: 0.00055 },
+    { time: "8h", price: 0.0006 },
   ];
 
-  const [messages, setMessages] = useState([
+  const [messages] = useState([
     {
       user: "CryptoFan_99",
       message: "Love the stream! 🚀",
@@ -54,7 +61,7 @@ const AnimatedHeroChat = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosition((prev) => ({
+      setPosition(() => ({
         x: Math.sin(Date.now() / 1000) * 10,
         y: Math.cos(Date.now() / 1000) * 10,
       }));
@@ -86,7 +93,7 @@ const AnimatedHeroChat = () => {
                 <Radio className="w-4 h-4 animate-pulse" />
                 <span className="font-bold">LIVE</span>
               </div>
- 
+
               <div className="absolute top-4 right-4 flex gap-4 z-20">
                 <div className="flex items-center gap-1 bg-black/50 px-3 py-1 rounded-full">
                   <Heart className="w-4 h-4 text-red-500" />
@@ -149,15 +156,15 @@ const AnimatedHeroChat = () => {
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={priceData}>
                   <XAxis dataKey="time" />
-                  <YAxis 
-                    domain={['auto', 'auto']}
+                  <YAxis
+                    domain={["auto", "auto"]}
                     tickFormatter={(value) => value.toFixed(5)}
                   />
                   <Tooltip />
-                  <Line 
-                    type="monotone" 
-                    dataKey="price" 
-                    stroke="#8884d8" 
+                  <Line
+                    type="monotone"
+                    dataKey="price"
+                    stroke="#8884d8"
                     strokeWidth={2}
                     dot={false}
                   />
@@ -180,7 +187,10 @@ const AnimatedHeroChat = () => {
 
             <div className="flex-1 overflow-y-auto p-4 space-y-4 font-mono h-[calc(100%-8rem)]">
               {messages.map((msg, index) => (
-                <div key={index} className="flex items-start gap-2 animate-fadeIn">
+                <div
+                  key={index}
+                  className="flex items-start gap-2 animate-fadeIn"
+                >
                   <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center">
                     <span className="text-white text-xs">
                       {msg.user.charAt(0)}

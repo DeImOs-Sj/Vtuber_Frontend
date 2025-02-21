@@ -1,4 +1,3 @@
-import React from "react";
 import d from "../assets/d.png";
 import e from "../assets/e.mp4";
 
@@ -49,7 +48,8 @@ const Middle = () => {
               >
                 Transform your memecoin community with AI-powered VTubers.
                 Real-time price tracking, automated interactions, and smart
-                rewards system to boost engagement and create unique experiences.
+                rewards system to boost engagement and create unique
+                experiences.
               </p>
             </div>
           </div>

@@ -1,4 +1,3 @@
-import Logo from "../assets/Dragon-Ball-Logo-2012-present.jpg";
 const Header = () => {
   return (
     <div>
