@@ -1,114 +1,126 @@
 import React from "react";
 import a from "../assets/a.jpg";
-import b from "../assets/b.jpeg";
-import c from "../assets/c.jpeg";
-import { motion } from "framer-motion";
-import { Sparkles, Star, Play, Tv } from "lucide-react";
+import f1 from "../assets/1f.png";
+import f2 from "../assets/2f.png";
+import f3 from "../assets/3f.png";
+import f4 from "../assets/f4.png";
+import { Heart, MessageSquare } from "lucide-react";
 
 const Main = () => {
-  const [hoveredIndex, setHoveredIndex] = React.useState(null);
-
   return (
-    <div className="container  p-8">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-red-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-yellow-500/10 rounded-full animate-pulse delay-700"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-purple-500/10 rounded-full animate-ping"></div>
+    <div className="container mx-auto px-4 py-8">
+      {/* Main heading */}
+      <div className="bg-[#FCFCE6] border-4 border-black rounded-xl p-6 mb-8">
+        <h1 className="text-4xl font-bold text-center">
+          Top MemeTuber Streams
+        </h1>
       </div>
-      <div className="flex flex-col lg:flex-row gap-20">
-        {/* Left side - Main image */}
-        <div className="w-full lg:w-1/2 relative group">
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl 
-                        transform group-hover:scale-105 transition-transform duration-500"
-          ></div>
-          <div className="rounded-3xl overflow-hidden relative">
+
+      <div className="flex flex-col lg:flex-row gap-12">
+        {/* Left side - Featured stream */}
+        <div className="w-full lg:w-2/5 relative">
+          <div className="rounded-xl overflow-hidden relative cursor-pointer border-4 border-black">
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
             <img
               src={a}
-              alt="Main VTuber"
-              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              alt="Featured Stream"
+              className="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-700"
             />
-            {/* Animated overlay elements */}
-            <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/50 px-3 py-1 rounded-full">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-              <span className="text-white font-bold">FEATURED</span>
+            <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+              <div className="bg-black/80 p-3 rounded-lg">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                  <span className="text-white font-bold">FEATURED LIVE</span>
+                </div>
+                <h2 className="text-white text-xl font-bold mb-1">Crypto Market Analysis</h2>
+                <p className="text-gray-300 text-sm">Join MemeVTuber for live market updates</p>
+              </div>
             </div>
-            <Sparkles className="absolute bottom-4 right-4 w-6 h-6 text-yellow-400 animate-bounce z-20" />
           </div>
         </div>
 
-        {/* Right side - Grid layout and text */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-evenly gap-8">
-          {/* Grid of VTuber thumbnails */}
-          <div className="grid grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="rounded-3xl overflow-hidden relative cursor-pointer transform hover:scale-105 transition-transform duration-300"
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
-                <img
-                  src={c}
-                  alt={`VTuber ${i}`}
-                  className="w-full h-full object-cover"
-                />
-                {hoveredIndex === i && (
-                  <div className="absolute inset-0 flex items-center justify-center z-20">
-                    <Play className="w-12 h-12 text-white animate-pulse" />
+        {/* Right side - Stream grid and info */}
+        <div className="w-full lg:w-3/5 flex flex-col gap-6">
+          {/* Stream grid */}
+          <div className="grid grid-cols-2 gap-6">
+            {[
+              {
+                image: f1,
+                title: "PEPE Coin Analysis",
+                streamer: "CryptoMemeKing",
+                viewers: "1.2K",
+                time: "2:30:15"
+              },
+              {
+                image: f2,
+                title: "DogeCoin To The Moon",
+                streamer: "MoonWarrior",
+                viewers: "856",
+                time: "1:45:30"
+              },
+              {
+                image: f3,
+                title: "Weekly Meme Review",
+                streamer: "MemeVTuber",
+                viewers: "2.1K",
+                time: "0:58:20"
+              },
+              {
+                image: f4,
+                title: "NFT Market Updates",
+                streamer: "CryptoArtist",
+                viewers: "1.5K",
+                time: "1:15:45"
+              }
+            ].map((stream, i) => (
+              <div key={i} className="relative group cursor-pointer">
+                <div className="w-full h-[200px] bg-[#FCFCE6] rounded-xl border-4 border-black overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <img
+                    src={stream.image}
+                    alt={stream.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0">
+                    {/* Stream Info */}
+                    <div className="absolute top-2 left-2 bg-red-500 px-2 py-1 rounded text-white text-sm font-bold">
+                      LIVE
+                    </div>
+                    <div className="absolute top-2 right-2 bg-black/50 px-2 py-1 rounded text-white text-sm">
+                      {stream.viewers} watching
+                    </div>
+                    
+                    {/* Interactive Icons */}
+                    <div className="flex flex-col items-end p-2 gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-black p-1.5 rounded hover:bg-black/70">
+                        <Heart className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="bg-black p-1.5 rounded hover:bg-black/70">
+                        <MessageSquare className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Stream Details */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-white">
+                      <div className="text-sm font-bold truncate">{stream.title}</div>
+                      <div className="text-xs text-gray-300 flex justify-between items-center">
+                        <span>{stream.streamer}</span>
+                        <span className="bg-black px-2 py-0.5 rounded">
+                          {stream.time}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                )}
-                <div className="absolute bottom-2 left-2 z-20 flex items-center gap-2">
-                  <Star className="w-4 h-4 text-yellow-400" />
-                  <span className="text-white text-sm font-bold">
-                    Channel {i}
-                  </span>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Text section below grid */}
-          <div className="max-w-4xl mx-auto p-8 space-y-6">
-            <div className="flex flex-col gap-6">
-              {/* Main Title */}
-              <h1
-                className="text-5xl font-bold text-red-500"
-                style={{
-                  textShadow: "2px 2px 0 #000",
-                  fontFamily: "monospace",
-                }}
-              >
-                Watch your favorite VTubers
-              </h1>
-
-              {/* Description Text */}
-              <p
-                className="text-2xl font-bold leading-relaxed"
-                style={{
-                  textShadow: "1px 1px 0 #000",
-                  fontFamily: "monospace",
-                }}
-              >
-                Our streams are available live or archived, and whole or in
-                clips. Methods have been developed to overcome challenges such
-                as stream lag and provide the best viewing experience.
-              </p>
-            </div>
+          {/* Call to action */}
+          <div className="flex justify-center mt-6">
+            <button className="bg-black hover:bg-black/80 px-8 py-4 rounded-xl border-4 border-yellow-400 font-bold text-xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center gap-2">
+              Start Streaming Now
+            </button>
           </div>
-          <button
-            className="bg-black w-1/2 hover:bg-green-500 text-white px-4 py-2 rounded flex items-center  transition-colors justify-center font-bold text-2xl "
-            style={{
-              textShadow: "2px 2px 0 #000",
-              fontFamily: "monospace",
-            }}
-          >
-            {/* <Link /> */}
-            STREAM NOW
-          </button>
         </div>
       </div>
     </div>
@@ -116,3 +128,4 @@ const Main = () => {
 };
 
 export default Main;
+

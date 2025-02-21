@@ -18,7 +18,7 @@ const Middle = () => {
                   fontFamily: "monospace",
                 }}
               >
-                Buy the new movies for family and friends
+                Create AI VTubers for Your Memecoin Project
               </h2>
               {/* Black Star Button */}
               <div className="relative mt-20 mb-20 left-40">
@@ -31,8 +31,8 @@ const Middle = () => {
                   }}
                 >
                   <div className="transform -rotate-12 text-center">
-                    <div className="font-bold">Buy</div>
-                    <div className="text-sm">Ticket</div>
+                    <div className="font-bold">Start</div>
+                    <div className="text-sm">Now</div>
                   </div>
                 </div>
               </div>
@@ -47,9 +47,9 @@ const Middle = () => {
                   fontFamily: "monospace",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                facilisi. Sed do eiusmod tempor incididunt ut labore. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco.
+                Transform your memecoin community with AI-powered VTubers.
+                Real-time price tracking, automated interactions, and smart
+                rewards system to boost engagement and create unique experiences.
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Middle = () => {
           {/* Bottom Section with Empty Box and Button */}
           <div className="grid grid-cols-2 gap-4 ">
             <button className="bg-black text-white rounded-lg p-4 flex items-center justify-between cursor-pointer">
-              Watch latest VTubes
+              View Live VTuber Streams
               <svg
                 className="w-6 h-6"
                 viewBox="0 0 24 24"
@@ -85,7 +85,7 @@ const Middle = () => {
               </svg>
             </button>
             <button className="bg-red-500 text-white rounded-lg p-4 flex items-center justify-between cursor-pointer">
-              Create your own characters
+              Deploy Your Memecoin VTuber
               <svg
                 className="w-6 h-6"
                 viewBox="0 0 24 24"
@@ -111,7 +111,7 @@ const Middle = () => {
                           bg-[#ffd700] text-black px-3 py-1 rounded-full 
                           text-sm font-bold h-[8rem]  "
             >
-              <h1 className="pt-[38px]">Watch Streams</h1>
+              <h1 className="pt-[38px]">AI VTubers</h1>
             </div>
           </div>
         </div>
