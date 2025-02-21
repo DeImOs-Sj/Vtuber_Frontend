@@ -68,10 +68,10 @@ const VTuberStreamPromo = () => {
                 fontFamily: "monospace",
               }}
             >
-              <span className="block transform -rotate-2 inline-block bg-yellow-300 px-4 py-2 mb-2 border">
+              <span className="block transform -rotate-2 inline-block bg-[#bbb4f1] px-4 py-2 mb-2 border">
                 Go Live or Record
               </span>
-              <span className="block transform rotate-1 inline-block bg-green-400 px-4 py-2 border">
+              <span className="block transform rotate-1 inline-block bg-red-300 px-4 py-2 border">
                 Streams with Friends
               </span>
             </h2>
@@ -86,13 +86,6 @@ const VTuberStreamPromo = () => {
               It's easy for VTubers to join from their browser or phone in a few
               clicks. No software downloads needed!
             </p>
-
-            <button
-              className="bg-black text-white px-8 py-4 rounded-xl font-bold text-xl 
-                           hover:bg-gray-800 transition-transform hover:scale-105 transform"
-            >
-              Start Streaming Now
-            </button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -157,7 +150,7 @@ const VTuberStreamPromo = () => {
                 fontFamily: "monospace",
               }}
             >
-              <span className="block transform -rotate-2 inline-block bg-yellow-300 px-4 py-2 mb-2 border">
+              <span className="block transform -rotate-2 inline-block bg-[#bbb4f1] px-4 py-2 mb-2 border">
                 Go Live or Record
               </span>
               <span className="block transform rotate-1 inline-block bg-red-300 px-4 py-2 border">
@@ -175,13 +168,6 @@ const VTuberStreamPromo = () => {
               It's easy for VTubers to join from their browser or phone in a few
               clicks. No software downloads needed!
             </p>
-
-            <button
-              className="bg-black text-white px-8 py-4 rounded-xl font-bold text-xl 
-                           hover:bg-gray-800 transition-transform hover:scale-105 transform"
-            >
-              Start Streaming Now
-            </button>
           </div>
         </div>
       </div>
