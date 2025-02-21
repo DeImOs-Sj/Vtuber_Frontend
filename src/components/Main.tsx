@@ -7,15 +7,15 @@ import { Heart, MessageSquare } from "lucide-react";
 
 const Main = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
       {/* Main heading */}
       <div className="bg-[#FCFCE6] border-4 border-black rounded-xl p-6 mb-8">
-        <h1 className="text-4xl font-bold text-center">
+        <h1 className="text-4xl font-bold text-center md:text-2xl">
           Top MemeTuber Streams
         </h1>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12">
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-6">
         {/* Left side - Featured stream */}
         <div className="w-full lg:w-2/5 relative">
           <div className="rounded-xl overflow-hidden relative cursor-pointer border-4 border-black">
@@ -122,9 +122,7 @@ const Main = () => {
 
           {/* Call to action */}
           <div className="flex justify-center mt-6">
-            <button className="bg-black hover:bg-black/80 px-8 py-4 rounded-xl border-4 border-yellow-400 font-bold text-xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center gap-2">
-              Start Streaming Now
-            </button>
+
           </div>
         </div>
       </div>

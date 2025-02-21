@@ -6,10 +6,10 @@ const Header = () => {
         <div className="max-w-7xl mx-auto py-4">
           <div className="flex justify-between items-center px-8">
             <div className="flex-1 flex items-center">
-              <span className="font-black text-6xl tracking-wider"
-                    style={{
-                      fontFamily: "'Bangers', cursive",
-                      letterSpacing: "0.1em"
+              <span className="font-black text-6xl tracking-wider md:text-4xl"
+                                   style={{
+                                     fontFamily: "'Bangers', cursive",
+                                     letterSpacing: "0.1em",
                     }}>
                 <span className="text-yellow-400"
                       style={{
@@ -26,22 +26,24 @@ const Header = () => {
               </span>
             </div>
             <nav className="flex-1 flex justify-end items-center">
-              {["HOME", "FEATURES", "PRICING", "DASHBOARD", "CONTACT"].map(
-                (item) => (
-                  <button
-                    key={item}
-                    className="font-bold text-lg px-6 py-3 mx-2 hover:text-yellow-400 transition-colors duration-300"
-                    style={{
-                      fontFamily: "'Bangers', cursive",
-                      letterSpacing: "0.05em",
-                      textShadow: "1px 1px 0px #000"
-                    }}
-                  >
-                    {item}
-                  </button>
-                )
-              )}
-            </nav>
+                          <div className="md:flex md:flex-row flex flex-col items-center">
+                           {["HOME", "FEATURES", "PRICING", "DASHBOARD", "CONTACT"].map(
+                             (item) => (
+                               <button
+                                 key={item}
+                                 className="font-bold text-lg px-6 py-3 mx-2 hover:text-yellow-400 transition-colors duration-300 md:mx-1 md:px-3 md:py-1"
+                                 style={{
+                                   fontFamily: "'Bangers', cursive",
+                                   letterSpacing: "0.05em",
+                                   textShadow: "1px 1px 0px #000"
+                                 }}
+                               >
+                                 {item}
+                               </button>
+                             )
+                           )}
+                           </div>
+                         </nav>
           </div>
         </div>
       </header>
