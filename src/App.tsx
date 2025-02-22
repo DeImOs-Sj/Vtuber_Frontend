@@ -1,20 +1,15 @@
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Middle from "./components/Middle";
-import Footer from "./components/Footer";
-import Showcase from "./components/Showcase";
-import MainHero from "./components/MainHero";
-import WorkShowcase from "./components/Workspace";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Login from "./pages/Login";
 function App() {
   return (
     <div className="bg-[#FCFCE6]">
-      <Header />
-      <MainHero />
-      <Main />
-      <Middle />
-      <Showcase />
-      <WorkShowcase />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
