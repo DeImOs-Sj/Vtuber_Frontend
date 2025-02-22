@@ -4,6 +4,7 @@ import f2 from "../assets/2f.png";
 import f3 from "../assets/3f.png";
 import f4 from "../assets/f4.png";
 import { Heart, MessageSquare } from "lucide-react";
+import Workspace from "./Workspace";
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
           Top MemeTuber Streams
         </h1>
       </div>
+      <Workspace />
 
       <div className="flex flex-col lg:flex-row gap-12 md:gap-6">
         {/* Left side - Featured stream */}
