@@ -4,18 +4,16 @@ import f2 from "../assets/2f.png";
 import f3 from "../assets/3f.png";
 import f4 from "../assets/f4.png";
 import { Heart, MessageSquare } from "lucide-react";
-import Workspace from "./Workspace";
 
 const Main = () => {
   return (
-    <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+    <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8 pt-[15rem] lg:pt-20">
       {/* Main heading */}
       <div className="bg-[#FCFCE6] border-4 border-black rounded-xl p-6 mb-8">
         <h1 className="text-4xl font-bold text-center md:text-2xl">
           Top MemeTuber Streams
         </h1>
       </div>
-      <Workspace />
 
       <div className="flex flex-col lg:flex-row gap-12 md:gap-6">
         {/* Left side - Featured stream */}
@@ -123,9 +121,7 @@ const Main = () => {
           </div>
 
           {/* Call to action */}
-          <div className="flex justify-center mt-6">
-
-          </div>
+          <div className="flex justify-center mt-6"></div>
         </div>
       </div>
     </div>

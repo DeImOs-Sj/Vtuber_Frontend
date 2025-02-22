@@ -1,15 +1,11 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-const Login = () => {
+const Buy = () => {
   return (
     <div>
-      <Header />
       <div className="min-h-screen flex flex-col lg:flex-row">
         {/* Left Side - Retro Animation */}
         <div className="w-full lg:w-1/2 p-4 md:p-8 lg:p-12 relative">
           {/* Background Elements */}
-          <div className="absolute top-1.5 left-4.5 w-32 h-32">
+          <div className="hidden  md:block absolute top-1.5 left-4.5 w-32 h-32">
             <div className="w-16 h-16 border-t-4 border-l-4 border-black opacity-60"></div>
           </div>
 
@@ -158,9 +154,8 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
 
-export default Login;
+export default Buy;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Radio, Heart, Star, MessageSquare, TrendingUp } from "lucide-react";
 import {
   LineChart,
@@ -45,31 +45,13 @@ const AnimatedHeroChat = () => {
     },
   ]);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPosition(() => ({
-        x: Math.sin(Date.now() / 1000) * 10,
-        y: Math.cos(Date.now() / 1000) * 10,
-      }));
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="mx-auto w-full pt-4 h-screen">
-      <div className="flex flex-col lg:flex-row gap-4 justify-center w-full h-full">
+    <div className="mx-auto w-full pt-[14rem] lg:pt-8 h-screen">
+      <div className="flex flex-col lg:flex-row gap-4 justify-center w-full h-full p-2">
         {/* Left Column: VTuber Avatar */}
         <div className="w-full lg:w-1/2 h-full">
           {/* VTuber Stream Container */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <div className="relative group">
             <div className="relative rounded-3xl overflow-hidden bg-[#FCFCE6] border-4 border-black p-4 h-full">
               {/* Live Button */}
               <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-1 rounded-full flex items-center gap-2 z-20">
