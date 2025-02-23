@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import f from "../assets/3f.png";
+import loopVideo from "../assets/loop.mp4";
 import { priceData } from "../lib/chartData";
 
 const AnimatedHeroChat = () => {
@@ -52,7 +52,7 @@ const AnimatedHeroChat = () => {
         <div className="w-full lg:w-1/2 h-full">
           {/* VTuber Stream Container */}
           <div className="relative group">
-            <div className="relative rounded-3xl overflow-hidden bg-[#FCFCE6] border-4 border-black p-4 h-full">
+            <div className="relative rounded-3xl overflow-hidden bg-[#FCFCE6] border-4 border-black h-full">
               {/* Live Button */}
               <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-1 rounded-full flex items-center gap-2 z-20">
                 <Radio className="w-4 h-4" />
@@ -70,11 +70,13 @@ const AnimatedHeroChat = () => {
                 </div>
               </div>
 
-              <div className="relative h-full">
-                <img
-                  src={f}
-                  alt="VTuber"
+              <div className="relative h-full ">
+                <video
+                  src={loopVideo}
                   className="w-full h-full object-cover rounded-2xl"
+                  autoPlay
+                  loop
+                  muted
                 />
               </div>
 
