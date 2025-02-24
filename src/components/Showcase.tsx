@@ -98,7 +98,7 @@ const VTuberStreamPromo = () => {
   );
 
   return (
-    <section className="mx-auto p-4 sm:p-6 lg:p-8" id="features">
+    <section className="mx-auto p-4 sm:p-6 lg:p-8">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-4">
         {/* First Stream Section */}
         <div className="flex flex-col md:flex-row gap-6 lg:gap-12 flex-1">

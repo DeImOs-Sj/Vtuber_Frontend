@@ -7,7 +7,7 @@ import { Heart, MessageSquare } from "lucide-react";
 
 const Main = () => {
   return (
-    <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8 pt-[15rem] lg:pt-20">
+    <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8 pt-[15rem] lg:pt-20 md:pt-[22rem]">
       {/* Main heading */}
       <div className="bg-[#FCFCE6] border-4 border-black rounded-xl p-6 mb-8">
         <h1 className="text-4xl font-bold text-center md:text-2xl">
